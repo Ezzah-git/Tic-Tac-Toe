@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #021A54, #0b2c84);
+    text-align: center;
+    color: #F5F5F5;
+}
+
+/* Title */
+h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Board (glass effect) */
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Boxes */
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 15px;
+    border: none;
+    background: #FFCEE3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #021A54;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    background: #ffc2dc;
+}
+
+.box:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+/* Buttons */
+button {
+    transition: all 0.2s ease;
+}
+
+#reset-btn, #new-game {
+    height: 45px;
+    width: 120px;
+    border-radius: 25px;
+    background: #F5F5F5;
+    color: #021A54;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#reset-btn:hover, #new-game:hover {
+    background: #dcdcdc;
+    transform: translateY(-2px);
+}
+
+/* Message Box */
+.msg {
+    margin-top: 20px;
+}
+
+#msg {
+    color: #FFE16A;
+    font-size: 6vmin;
+    margin-bottom: 10px;
+}
+
+.hide {
+    display: none;
+}
+</style>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="msg hide">
+        <p id="msg">Winner 🌟</p>
+        <button id="new-game" >New Game</button>
+    </div>
+    <div class="container">
+          <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+    </div>
+<button id="reset-btn">Reset</button>  
+<script src="TicTacToe.js"></script>
+</body>
+
+</html>
